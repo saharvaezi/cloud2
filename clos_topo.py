@@ -41,7 +41,7 @@ class ClosTopo(Topo):
             aggregation_switches.append(switch)
             counter=counter+1
         pass
-        for i in range(edges_num):
+        for i in range(int(edges_num)):
             switch=self.addSwitch('e'+str(counter))
             for j in range(aggregations_num):
                 self.addLink(switch,aggregation_switches[j])
@@ -49,7 +49,7 @@ class ClosTopo(Topo):
             counter=counter+1
         pass
         host_counter=1
-        for i in range(edges_num):
+        for i in range(int(edges_num)):
             for j in range(2):
                 host=self.addHost('h'+str(host_counter))
                 self.addLink(host,edge_switches[j])
