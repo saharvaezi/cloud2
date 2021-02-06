@@ -26,7 +26,7 @@ class ClosTopo(Topo):
 
         aggregations_num = fanout*cores
         edges_num = fanout*aggregations_num
-        hosts_num = fanout*edge_num
+        hosts_num = fanout*edges_num
 
         counter=1
         for i in range(cores):
@@ -50,7 +50,7 @@ class ClosTopo(Topo):
         pass
         host_counter=1
         for i in range(edges_num):
-            for j in range(2):
+            for j in range(fanout):
                 host=self.addHost('h'+str(host_counter))
                 self.addLink(host,edge_switches[j])
                 host_counter=host_counter+1
