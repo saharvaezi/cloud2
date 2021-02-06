@@ -25,7 +25,7 @@ class ClosTopo(Topo):
         hosts = []
 
         aggregations_num = fanout*cores
-        edges_num = fanout*aggregation_num
+        edges_num = fanout*aggregations_num
         hosts_num = fanout*edge_num
 
         counter=1
